@@ -11,7 +11,7 @@ import os
 client = genai.Client(api_key="AIzaSyAiECjwRWdaP51XGzVDZ_lcfoeyczw4NKE")
 
 # MongoDB setup
-mongo_client = MongoClient("mongodb://atlas-sql-68ac9d90b8b1c5300650780d-lyvz8.a.query.mongodb.net/sample_mflix?ssl=true&authSource=admin")
+mongo_client = MongoClient("mongodb+srv://Adi:192002@cluster0.wi6nwiq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = mongo_client["gold_investments"]
 transactions = db["transactions"]
 
@@ -79,5 +79,6 @@ async def buy_gold(request: Request):
         "message": "Transaction successful!",
         "details": transaction
     }))
+
 
 

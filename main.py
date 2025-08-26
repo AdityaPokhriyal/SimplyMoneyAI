@@ -80,3 +80,4 @@ async def buy_gold(request: Request):
         "details": transaction
     }))
 
+
